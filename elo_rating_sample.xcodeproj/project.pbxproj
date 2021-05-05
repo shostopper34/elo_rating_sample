@@ -22,6 +22,9 @@
 		FF9116892642594700448927 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9116882642594700448927 /* MainViewModel.swift */; };
 		FF91168B26425B3B00448927 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91168A26425B3B00448927 /* Match.swift */; };
 		FF91168D26425C5200448927 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91168C26425C5200448927 /* Player.swift */; };
+		FF91168F26427C4000448927 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91168E26427C4000448927 /* MatchViewController.swift */; };
+		FF91169326427D0300448927 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91169226427D0300448927 /* RankingViewController.swift */; };
+		FF91169526427D2800448927 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91169426427D2800448927 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		FF9116882642594700448927 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		FF91168A26425B3B00448927 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		FF91168C26425C5200448927 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		FF91168E26427C4000448927 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
+		FF91169226427D0300448927 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
+		FF91169426427D2800448927 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,9 @@
 				FF9116882642594700448927 /* MainViewModel.swift */,
 				FF91168A26425B3B00448927 /* Match.swift */,
 				FF91168C26425C5200448927 /* Player.swift */,
+				FF91168E26427C4000448927 /* MatchViewController.swift */,
+				FF91169226427D0300448927 /* RankingViewController.swift */,
+				FF91169426427D2800448927 /* HistoryViewController.swift */,
 			);
 			path = elo_rating_sample;
 			sourceTree = "<group>";
@@ -436,13 +445,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF91168F26427C4000448927 /* MatchViewController.swift in Sources */,
 				FF91168B26425B3B00448927 /* Match.swift in Sources */,
 				FF9116892642594700448927 /* MainViewModel.swift in Sources */,
+				FF91169526427D2800448927 /* HistoryViewController.swift in Sources */,
 				FF08A04C264235C8006A8A39 /* ViewController.swift in Sources */,
 				FF08A07926423C16006A8A39 /* AlertUtil.swift in Sources */,
 				FF91168D26425C5200448927 /* Player.swift in Sources */,
 				FF08A048264235C8006A8A39 /* AppDelegate.swift in Sources */,
 				FF08A04A264235C8006A8A39 /* SceneDelegate.swift in Sources */,
+				FF91169326427D0300448927 /* RankingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

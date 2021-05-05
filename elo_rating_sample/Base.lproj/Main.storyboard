@@ -64,16 +64,17 @@
                     <connections>
                         <outlet property="okButton" destination="ajc-q0-oha" id="CkE-Ri-2vT"/>
                         <outlet property="textField" destination="bVV-Kp-mTp" id="FfK-IU-KzA"/>
+                        <segue destination="FPt-XH-onL" kind="show" identifier="match" id="hbc-2f-NbP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="864" y="165"/>
         </scene>
-        <!--Table View Controller-->
+        <!--History View Controller-->
         <scene sceneID="h5M-sG-dor">
             <objects>
-                <tableViewController id="8sU-ae-YlT" sceneMemberID="viewController">
+                <tableViewController id="8sU-ae-YlT" customClass="HistoryViewController" customModule="elo_rating_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6Xy-QD-8ow">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,10 +95,112 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="n86-Ab-i75"/>
+                    <connections>
+                        <segue destination="FPt-XH-onL" kind="show" id="L40-KR-kBf"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXF-8p-QTJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1710" y="165"/>
+        </scene>
+        <!--Match View Controller-->
+        <scene sceneID="2rp-Ix-SmJ">
+            <objects>
+                <viewController id="FPt-XH-onL" customClass="MatchViewController" customModule="elo_rating_sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BhW-M1-5VJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="どっちが勝った？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpD-4g-rN7">
+                                <rect key="frame" x="0.0" y="426" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fpD-4g-rN7" secondAttribute="height" multiplier="375:40" id="zK5-o0-YGq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izw-Vo-H4h">
+                                <rect key="frame" x="0.0" y="88" width="414" height="338"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="winPlayer1:" destination="FPt-XH-onL" eventType="touchUpInside" id="Ncz-y7-YcS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQM-qZ-Z7a">
+                                <rect key="frame" x="0.0" y="470" width="414" height="392"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="winPlayer2:" destination="FPt-XH-onL" eventType="touchUpInside" id="eMM-2m-vqG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ojU-98-nfB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fpD-4g-rN7" firstAttribute="centerY" secondItem="BhW-M1-5VJ" secondAttribute="centerY" id="0JH-7d-h0k"/>
+                            <constraint firstItem="ojU-98-nfB" firstAttribute="bottom" secondItem="rQM-qZ-Z7a" secondAttribute="bottom" id="5ek-KO-Dpj"/>
+                            <constraint firstItem="fpD-4g-rN7" firstAttribute="top" secondItem="izw-Vo-H4h" secondAttribute="bottom" id="6S0-WG-lwl"/>
+                            <constraint firstItem="rQM-qZ-Z7a" firstAttribute="leading" secondItem="ojU-98-nfB" secondAttribute="leading" id="7p5-Vg-Orw"/>
+                            <constraint firstItem="ojU-98-nfB" firstAttribute="trailing" secondItem="rQM-qZ-Z7a" secondAttribute="trailing" id="NY7-u3-8Pi"/>
+                            <constraint firstItem="fpD-4g-rN7" firstAttribute="trailing" secondItem="ojU-98-nfB" secondAttribute="trailing" id="Syb-8B-tpg"/>
+                            <constraint firstItem="izw-Vo-H4h" firstAttribute="top" secondItem="ojU-98-nfB" secondAttribute="top" id="TJK-an-py0"/>
+                            <constraint firstItem="izw-Vo-H4h" firstAttribute="leading" secondItem="ojU-98-nfB" secondAttribute="leading" id="W9I-g0-Csg"/>
+                            <constraint firstItem="fpD-4g-rN7" firstAttribute="leading" secondItem="ojU-98-nfB" secondAttribute="leading" id="axJ-Gs-XpR"/>
+                            <constraint firstItem="fpD-4g-rN7" firstAttribute="centerX" secondItem="BhW-M1-5VJ" secondAttribute="centerX" id="cer-Yw-HAk"/>
+                            <constraint firstItem="ojU-98-nfB" firstAttribute="trailing" secondItem="izw-Vo-H4h" secondAttribute="trailing" id="nDA-oA-dnt"/>
+                            <constraint firstItem="rQM-qZ-Z7a" firstAttribute="top" secondItem="fpD-4g-rN7" secondAttribute="bottom" id="otw-F7-dyw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nlO-EK-SRo">
+                        <barButtonItem key="rightBarButtonItem" title="ランキング" id="p2E-GC-1sN">
+                            <connections>
+                                <segue destination="PiC-O5-4ET" kind="show" id="Il2-Xa-6JM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="player1" destination="izw-Vo-H4h" id="aN3-WX-bwX"/>
+                        <outlet property="player2" destination="rQM-qZ-Z7a" id="Sr5-d7-GJK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s7d-BP-X9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864" y="905"/>
+        </scene>
+        <!--Ranking View Controller-->
+        <scene sceneID="daX-Zl-KqZ">
+            <objects>
+                <tableViewController id="PiC-O5-4ET" customClass="RankingViewController" customModule="elo_rating_sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6l3-T1-GGf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6rO-Dy-YN2">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6rO-Dy-YN2" id="lYX-Uf-QSx">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PiC-O5-4ET" id="MHJ-Iz-IWX"/>
+                            <outlet property="delegate" destination="PiC-O5-4ET" id="JDN-Ep-Dnc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="GxX-r0-4Ka"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WYh-1r-Avn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1709" y="905"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fwy-SU-Rr6">
@@ -116,9 +219,18 @@
             <point key="canvasLocation" x="90" y="165"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="L40-KR-kBf"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

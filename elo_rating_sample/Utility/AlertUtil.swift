@@ -38,4 +38,24 @@ enum AlertUtil {
             completion?()
         })
     }
+    
+    static func showAlert(title: String,
+                          message: String,
+                          buttonTitle: String? = nil,
+                          parentViewController: UIViewController,
+                          buttonDidPushed: (() -> Void)? = nil,
+                          completion: (() -> Void)? = nil) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: UIAlertController.Style.alert)
+        let action1 = UIAlertAction(title: buttonTitle ?? "OK",
+                                    style: UIAlertAction.Style.default,
+                                    handler: { (action: UIAlertAction) in
+            buttonDidPushed?()
+        })
+        alert.addAction(action1)
+        parentViewController.present(alert, animated: true, completion: {
+            completion?()
+        })
+    }
 }

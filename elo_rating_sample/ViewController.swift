@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
     
+    private let viewModel = MainViewModel()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -31,6 +34,32 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tapOkButton(_ sender: Any) {
+        let size = Int(textField.text ?? "") ?? 0
+        if size > 0 {
+            showMatchAlert(size: size)
+        } else {
+            AlertUtil.showAlert(title: "人数は0以上で入力してください",
+                                message: "",
+                                parentViewController: self)
+
+        }
     }
+    
+    private func showMatchAlert(size: Int) {
+        let title = "大会を作成"
+        let message = "\(size)人で対戦します\nよろしいですか？"
+        AlertUtil.showMultiButtonAlert(title: title,
+                                       message: message,
+                                       positiveButtonTitle: "はい",
+                                       negativeButtonTitle: "やり直す",
+                                       parentViewController: self,
+                                       postiveButtonPushed: {
+            self.textField.text = ""
+            let id = self.viewModel.createNewMatch(size: size)
+            self.viewModel.createPlayers(matchId: id, size: size)
+            self.performSegue(withIdentifier: "match", sender: nil)
+        }, negativeButtonPushed: {}, completion: {})
+    }
+    
 }
 
