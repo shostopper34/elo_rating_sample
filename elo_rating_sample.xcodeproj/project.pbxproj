@@ -25,6 +25,8 @@
 		FF91168F26427C4000448927 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91168E26427C4000448927 /* MatchViewController.swift */; };
 		FF91169326427D0300448927 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91169226427D0300448927 /* RankingViewController.swift */; };
 		FF91169526427D2800448927 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91169426427D2800448927 /* HistoryViewController.swift */; };
+		FF9116982642976B00448927 /* HistoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9116962642976B00448927 /* HistoryViewCell.swift */; };
+		FF9116992642976B00448927 /* HistoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9116972642976B00448927 /* HistoryViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		FF91168E26427C4000448927 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		FF91169226427D0300448927 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		FF91169426427D2800448927 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		FF9116962642976B00448927 /* HistoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewCell.swift; sourceTree = "<group>"; };
+		FF9116972642976B00448927 /* HistoryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,8 @@
 				FF91168E26427C4000448927 /* MatchViewController.swift */,
 				FF91169226427D0300448927 /* RankingViewController.swift */,
 				FF91169426427D2800448927 /* HistoryViewController.swift */,
+				FF9116962642976B00448927 /* HistoryViewCell.swift */,
+				FF9116972642976B00448927 /* HistoryViewCell.xib */,
 			);
 			path = elo_rating_sample;
 			sourceTree = "<group>";
@@ -316,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF08A054264235D6006A8A39 /* LaunchScreen.storyboard in Resources */,
+				FF9116992642976B00448927 /* HistoryViewCell.xib in Resources */,
 				FF08A051264235D6006A8A39 /* Assets.xcassets in Resources */,
 				FF08A04F264235C8006A8A39 /* Main.storyboard in Resources */,
 			);
@@ -454,6 +461,7 @@
 				FF91168D26425C5200448927 /* Player.swift in Sources */,
 				FF08A048264235C8006A8A39 /* AppDelegate.swift in Sources */,
 				FF08A04A264235C8006A8A39 /* SceneDelegate.swift in Sources */,
+				FF9116982642976B00448927 /* HistoryViewCell.swift in Sources */,
 				FF91169326427D0300448927 /* RankingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

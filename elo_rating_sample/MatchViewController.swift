@@ -12,9 +12,12 @@ class MatchViewController: UIViewController {
     @IBOutlet weak var player1: UIButton!
     @IBOutlet weak var player2: UIButton!
     
+    var match: Match!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("\(match)")
         // Do any additional setup after loading the view.
     }
 

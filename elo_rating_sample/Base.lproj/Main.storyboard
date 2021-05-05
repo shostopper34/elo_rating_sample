@@ -79,16 +79,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="B0q-Bd-Cby">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B0q-Bd-Cby" id="MiU-Ge-eog">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="8sU-ae-YlT" id="Cph-Hj-pxc"/>
                             <outlet property="delegate" destination="8sU-ae-YlT" id="6R8-0A-VLr"/>
@@ -96,7 +86,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="n86-Ab-i75"/>
                     <connections>
-                        <segue destination="FPt-XH-onL" kind="show" id="L40-KR-kBf"/>
+                        <segue destination="FPt-XH-onL" kind="show" identifier="match" id="L40-KR-kBf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXF-8p-QTJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
