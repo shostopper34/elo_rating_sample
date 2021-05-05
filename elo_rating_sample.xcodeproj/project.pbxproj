@@ -29,6 +29,8 @@
 		FF9116992642976B00448927 /* HistoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9116972642976B00448927 /* HistoryViewCell.xib */; };
 		FF91169C26429F8D00448927 /* RankingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91169A26429F8D00448927 /* RankingViewCell.swift */; };
 		FF91169D26429F8D00448927 /* RankingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF91169B26429F8D00448927 /* RankingViewCell.xib */; };
+		FF91169F2642B5F200448927 /* EloRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91169E2642B5F200448927 /* EloRating.swift */; };
+		FF9116A12642B80600448927 /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9116A02642B80600448927 /* MatchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		FF9116972642976B00448927 /* HistoryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewCell.xib; sourceTree = "<group>"; };
 		FF91169A26429F8D00448927 /* RankingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewCell.swift; sourceTree = "<group>"; };
 		FF91169B26429F8D00448927 /* RankingViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingViewCell.xib; sourceTree = "<group>"; };
+		FF91169E2642B5F200448927 /* EloRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EloRating.swift; sourceTree = "<group>"; };
+		FF9116A02642B80600448927 /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,8 @@
 				FF9116972642976B00448927 /* HistoryViewCell.xib */,
 				FF91169A26429F8D00448927 /* RankingViewCell.swift */,
 				FF91169B26429F8D00448927 /* RankingViewCell.xib */,
+				FF91169E2642B5F200448927 /* EloRating.swift */,
+				FF9116A02642B80600448927 /* MatchViewModel.swift */,
 			);
 			path = elo_rating_sample;
 			sourceTree = "<group>";
@@ -461,8 +467,10 @@
 			files = (
 				FF91168F26427C4000448927 /* MatchViewController.swift in Sources */,
 				FF91168B26425B3B00448927 /* Match.swift in Sources */,
+				FF9116A12642B80600448927 /* MatchViewModel.swift in Sources */,
 				FF9116892642594700448927 /* MainViewModel.swift in Sources */,
 				FF91169526427D2800448927 /* HistoryViewController.swift in Sources */,
+				FF91169F2642B5F200448927 /* EloRating.swift in Sources */,
 				FF08A04C264235C8006A8A39 /* ViewController.swift in Sources */,
 				FF08A07926423C16006A8A39 /* AlertUtil.swift in Sources */,
 				FF91168D26425C5200448927 /* Player.swift in Sources */,
