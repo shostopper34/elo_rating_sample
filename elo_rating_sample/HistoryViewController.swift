@@ -19,6 +19,8 @@ class HistoryViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.title = "Match履歴"
+        
         self.tableView.register(UINib(nibName: HistoryViewCell.nibName, bundle: nil),
                                 forCellReuseIdentifier: HistoryViewCell.reuseIdentifer)
         
@@ -66,14 +68,14 @@ class HistoryViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         Observable.from(object: matches[indexPath.row])
             .subscribe(onNext: { [weak self] match in
-                self?.performSegue(withIdentifier: "match", sender: match)
+                self?.performSegue(withIdentifier: "match", sender: match.id)
             }).disposed(by: disposeBag)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "match" {
             let matchViewController = segue.destination as! MatchViewController
-            matchViewController.match = sender as? Match
+            matchViewController.matchId = sender as! Int
         }
     }
 

@@ -150,13 +150,14 @@
                     <navigationItem key="navigationItem" id="nlO-EK-SRo">
                         <barButtonItem key="rightBarButtonItem" title="ランキング" id="p2E-GC-1sN">
                             <connections>
-                                <segue destination="PiC-O5-4ET" kind="show" id="Il2-Xa-6JM"/>
+                                <action selector="ranking:" destination="FPt-XH-onL" id="Au7-51-1eK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="player1" destination="izw-Vo-H4h" id="aN3-WX-bwX"/>
                         <outlet property="player2" destination="rQM-qZ-Z7a" id="Sr5-d7-GJK"/>
+                        <segue destination="PiC-O5-4ET" kind="show" identifier="rank" id="dYI-X0-tdb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7d-BP-X9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -171,16 +172,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6rO-Dy-YN2">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6rO-Dy-YN2" id="lYX-Uf-QSx">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="PiC-O5-4ET" id="MHJ-Iz-IWX"/>
                             <outlet property="delegate" destination="PiC-O5-4ET" id="JDN-Ep-Dnc"/>

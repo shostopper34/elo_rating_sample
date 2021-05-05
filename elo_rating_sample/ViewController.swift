@@ -55,11 +55,17 @@ class ViewController: UIViewController {
                                        parentViewController: self,
                                        postiveButtonPushed: {
             self.textField.text = ""
-            let id = self.viewModel.createNewMatch(size: size)
-            self.viewModel.createPlayers(matchId: id, size: size)
-            self.performSegue(withIdentifier: "match", sender: nil)
+            let match = self.viewModel.createNewMatch(size: size)
+            self.viewModel.createPlayers(matchId: match.id, size: size)
+            self.performSegue(withIdentifier: "match", sender: match.id)
         }, negativeButtonPushed: {}, completion: {})
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "match" {
+            let matchViewController = segue.destination as! MatchViewController
+            matchViewController.matchId = sender as! Int
+        }
+    }
 }
 
