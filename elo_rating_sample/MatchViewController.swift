@@ -38,8 +38,8 @@ class MatchViewController: UIViewController {
     
     @IBAction func winPlayer1(_ sender: Any) {
         guard let p1 = self.p1, let p2 = self.p2 else { return }
-        let p1Score = EloRating.win(oldScore: p1.score, opponentOldScore: p2.score)
-        let p2Score = EloRating.lose(oldScore: p2.score, opponentOldScore: p1.score)
+        let p1Score = EloRating.win(oldScore: Double(p1.score), opponentOldScore: Double(p2.score))
+        let p2Score = EloRating.lose(oldScore: Double(p2.score), opponentOldScore: Double(p1.score))
         viewModel.updateScore(player: p1, score: p1Score)
         viewModel.updateScore(player: p2, score: p2Score)
         viewModel.removeMatch()
@@ -49,8 +49,8 @@ class MatchViewController: UIViewController {
     
     @IBAction func winPlayer2(_ sender: Any) {
         guard let p1 = self.p1, let p2 = self.p2 else { return }
-        let p2Score = EloRating.win(oldScore: p2.score, opponentOldScore: p1.score)
-        let p1Score = EloRating.lose(oldScore: p1.score, opponentOldScore: p2.score)
+        let p2Score = EloRating.win(oldScore: Double(p2.score), opponentOldScore: Double(p1.score))
+        let p1Score = EloRating.lose(oldScore: Double(p1.score), opponentOldScore: Double(p2.score))
         viewModel.updateScore(player: p1, score: p1Score)
         viewModel.updateScore(player: p2, score: p2Score)
         viewModel.removeMatch()

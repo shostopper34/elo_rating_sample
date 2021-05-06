@@ -9,19 +9,19 @@ import Foundation
 
 class EloRating {
     
-    static let K: Int = 32
-    static let E: Int = 400
+    static let K: Double = 32.0
+    static let E: Double = 400.0
     
-    static func win(oldScore: Int, opponentOldScore: Int) -> Int {
-        return oldScore + K * (Score.win.rawValue - (1 / (1 + 10 ^ (-(oldScore - opponentOldScore) / E))))
+    static func win(oldScore: Double, opponentOldScore: Double) -> Int {
+        return Int(oldScore + Double((K * Score.win.rawValue - (1.0 / (1.0 + pow(10, -((oldScore - opponentOldScore) / E)))))))
     }
     
-    static func lose(oldScore: Int, opponentOldScore: Int) -> Int {
-        return oldScore + K * (Score.lose.rawValue - (1 / (1 + 10 ^ (-(oldScore - opponentOldScore) / E))))
+    static func lose(oldScore: Double, opponentOldScore: Double) -> Int {
+        return Int(oldScore + Double((K * Score.lose.rawValue - (1.0 / (1.0 + pow(10, -((oldScore - opponentOldScore) / E)))))))
     }
 }
 
-enum Score: Int {
+enum Score: Double {
     case win = 1
     case lose = 0
 }
