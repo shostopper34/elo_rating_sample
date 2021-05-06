@@ -13,11 +13,14 @@ class EloRating {
     static let E: Double = 400.0
     
     static func win(oldScore: Double, opponentOldScore: Double) -> Int {
-        return Int(oldScore + Double((K * Score.win.rawValue - (1.0 / (1.0 + pow(10, -((oldScore - opponentOldScore) / E)))))))
+        let exp = pow(10, -((oldScore - opponentOldScore) / E))
+        print("win oldscore = \(oldScore) opponentoldscore = \(opponentOldScore)")
+        return Int(oldScore + (K * (Score.win.rawValue - (1.0 / (1.0 + exp)))))
     }
     
     static func lose(oldScore: Double, opponentOldScore: Double) -> Int {
-        return Int(oldScore + Double((K * Score.lose.rawValue - (1.0 / (1.0 + pow(10, -((oldScore - opponentOldScore) / E)))))))
+        let exp = pow(10, -((oldScore - opponentOldScore) / E))
+        return Int(oldScore + (K * (Score.lose.rawValue - (1.0 / (1.0 + exp)))))
     }
 }
 
